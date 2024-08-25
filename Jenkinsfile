@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'mvn deploy -DaltDeploymentRepository=snapshots::default::https://github.com/rujutamedhi/Maven'
+                bat 'mvn deploy -DaltDeploymentRepository=snapshots::default::https://github.com/rujutamedhi/Maven/snapshots'
             }
         }
     }
