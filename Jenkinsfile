@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn clean install'  // Example command for a Maven project
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test'  // Example command for running tests
+                bat 'mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'mvn deploy'  // Example command for deployment
+                bat 'mvn deploy -DaltDeploymentRepository=snapshots::default::https://github.com/rujutamedhi/Maven'
             }
         }
     }
